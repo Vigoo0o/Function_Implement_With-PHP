@@ -35,3 +35,40 @@
 
     return $result;
   }
+
+
+  // Write dcoumentation for this function below
+  /**
+   * Fills a string with zeros on the left to a specified length.
+   *
+   * @param string $str The string to fill.
+   * @param int $len The desired length of the string.
+   * @return string The filled string.
+   */
+  function zFill($str, $len, $fillChar = '0') : string {
+
+    if (strlen($str) >= $len) {
+      return $str;
+    }
+
+    $countToFill = $len - strlen($str);
+
+    $fillStr = '';
+    for ($i = 1; $i <= $countToFill; $i++) {
+      $fillStr .= $fillChar;
+    }
+
+
+    return ($fillStr . $str);
+  }
+
+
+  function StringReverce($str) : string {
+    $reversedString = '';
+
+    for ($i = 0; $i < strlen($str); $i++) {
+      $reversedString = $str[$i] . $reversedString;
+    }
+
+    return $reversedString;
+  }
