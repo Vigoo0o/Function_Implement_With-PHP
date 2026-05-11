@@ -37,7 +37,6 @@
   }
 
 
-  // Write dcoumentation for this function below
   /**
    * Fills a string with zeros on the left to a specified length.
    *
@@ -63,6 +62,12 @@
   }
 
 
+  /**
+   * Reverses a string.
+   *
+   * @param string $str The string to reverse.
+   * @return string The reversed string.
+   */
   function StringReverce($str) : string {
     $reversedString = '';
 
@@ -71,4 +76,19 @@
     }
 
     return $reversedString;
+  }
+
+
+
+  /**
+   * Generates letters with their ASCII codes.
+   *
+   * @param string $from The starting letter.
+   * @param string $to The ending letter.
+   * @return void
+   */
+  function GenerateLattersWithASCIICode($from = 'A', $to = 'Z') : void {
+  for ($i = ord($from); $i <= ord($to); $i++) {
+    echo chr($i) . ' | ' . $i . '<br>';
+  }
   }
