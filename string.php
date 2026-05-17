@@ -92,3 +92,64 @@
     echo chr($i) . ' | ' . $i . '<br>';
   }
   }
+
+  /**
+   * Converts a string to lowercase.
+   *
+   * @param string $str The string to convert.
+   * @return string The lowercase string.
+   */
+  function StrToLowerCase($str) : string {
+    $lowered = '';
+
+    foreach (str_split($str) as $char) {
+      if (ord($char) >= 65 && ord($char) <= 90) {
+        $lowered .= chr(ord($char) + 32);
+      } else {
+        $lowered .= $char;
+      }
+    }
+
+    return $lowered;
+  } 
+
+
+    /**
+     * Converts a string to uppercase.
+     *
+     * @param string $str The string to convert.
+     * @return string The uppercase string.
+     */
+    function StrToUpperCase($str) : string {
+    $uppered = '';
+
+    foreach (str_split($str) as $char) {
+      if (ord($char) >= 97 && ord($char) <= 122) {
+        $uppered .= chr(ord($char) - 32);
+      } else {
+        $uppered .= $char;
+      }
+    }
+
+    return $uppered;
+  }
+
+  /**
+   * Swaps the case of a string.
+   *
+   * @param string $str The string to swap case.
+   * @return string The string with swapped case.
+   */
+  function SwapCase($str) {
+  $swaped = '';
+
+    foreach (str_split($str) as $char) {
+      if (ord($char) >= 97 && ord($char) <= 122) {
+        $swaped .= chr(ord($char) - 32);
+      } else {
+        $swaped .= chr(ord($char) + 32);
+      }
+    }
+
+    return $swaped;
+  }
