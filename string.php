@@ -99,7 +99,7 @@
    * @param string $str The string to convert.
    * @return string The lowercase string.
    */
-  function StrToLowerCase($str) : string {
+  function ToLowerCase($str) : string {
     $lowered = '';
 
     foreach (str_split($str) as $char) {
@@ -120,7 +120,7 @@
      * @param string $str The string to convert.
      * @return string The uppercase string.
      */
-    function StrToUpperCase($str) : string {
+    function ToUpperCase($str) : string {
     $uppered = '';
 
     foreach (str_split($str) as $char) {
