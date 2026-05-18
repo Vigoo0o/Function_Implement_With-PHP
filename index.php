@@ -5,6 +5,5 @@ error_reporting(E_ALL);
   include './string.php';
   include './array.php';
 
-  echo StrToLowerCase('VIGo') . '<br>';
-  echo StrToUpperCase("vigO") . '<br>';
-  echo SwapCase("vigO") . '<br>';
+
+  echo ParseInt("123Vi456go");

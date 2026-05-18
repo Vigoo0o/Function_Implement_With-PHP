@@ -140,7 +140,7 @@
    * @param string $str The string to swap case.
    * @return string The string with swapped case.
    */
-  function SwapCase($str) {
+  function SwapCase($str) : string {
   $swaped = '';
 
     foreach (str_split($str) as $char) {
@@ -152,4 +152,22 @@
     }
 
     return $swaped;
+  }
+
+  /**
+   * Parses a string and converts it to an integer.
+   *
+   * @param string $str The string to parse.
+   * @return int The parsed integer.
+   */
+  function ParseInt($str) : int {
+    $result = '';
+
+    foreach (str_split($str) as $char) {
+      if (ord($char) >= 48 && ord($char) <= 57) {
+        $result .= $char;
+      }
+    }
+
+    return (int)$result;
   }
