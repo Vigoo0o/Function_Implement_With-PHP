@@ -171,3 +171,19 @@
 
     return (int)$result;
   }
+
+
+  /**
+   * Checks if a string represents a valid number.
+   *
+   * @param string $str The string to check.
+   * @return bool True if the string is a valid number, false otherwise.
+   */
+  function IsNaN($str) : bool {
+    foreach (str_split($str) as $num) {
+      if (ord($num) < 48 || ord($num) > 57)
+        return true;
+    }
+
+    return false;
+  }

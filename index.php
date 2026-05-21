@@ -6,4 +6,8 @@ error_reporting(E_ALL);
   include './array.php';
 
 
-  echo ParseInt("123Vi456go");
+  if (IsNaN('123456')) {
+    echo 'Is Not A Number!';
+  } else {
+    echo 'Is A Number!';
+  }
