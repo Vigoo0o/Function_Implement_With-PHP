@@ -187,3 +187,100 @@
 
     return false;
   }
+
+  /**
+   * Trims whitespace from a string.
+   *
+   * @param string $str The string to trim.
+   * @param string $position The position to trim from ('All', 'Left', 'Right').
+   * @param string $char The character to trim.
+   * @return string The trimmed string.
+   */
+  function Trimm($str, $position = 'All', $char = ' ') : string {
+    $result = '';
+    if ($position == 'All') {
+      $countOfFirstChar = 0;
+      $countOfLastChar = 0;
+      for ($i = 0; $i < strlen($str); $i++) {
+        if ($str[$i] != $char) {
+          $countOfFirstChar = $i;
+          break;
+        }
+      }
+      for ($i = strlen($str) - 1; $i >= 0; $i--) {
+        if ($str[$i] != $char) {
+          $countOfLastChar = $i;
+          break;
+        }
+      }
+        $result = substr($str, $countOfFirstChar, $countOfLastChar - $countOfFirstChar + 1);
+    } elseif ($position == 'Left') {
+      for ($i = 0; $i < strlen($str); $i++) {
+        if ($str[$i] != $char) {
+          return substr($str, $i);
+        }
+      }
+    } elseif ($position == 'Right') {
+      for ($i = strlen($str) - 1; $i > 0; $i--) {
+        if ($str[$i] != $char) {
+          return substr($str, 0, $i + 1);
+        }
+      }
+    }
+
+    return $result;
+  }
+
+  /**
+   * Checks if a target string exists within another string.
+   *
+   * @param string $str The string to search in.
+   * @param string $target The string to search for.
+   * @return bool True if the target string exists, false otherwise.
+   */
+  function IfStrExist($str, $target) : bool {
+    $result = '';
+    $targetCount = 0;
+    for ($i = 0; $i < strlen($str); $i++) {
+      if ($str[$i] == $target[$targetCount]) {
+        $result .= $str[$i];
+        $targetCount++;
+      }
+    }
+
+    return strlen($result) == strlen($target) ? true : false;
+  }
+
+  /**
+   * Extracts a substring from a string.
+   *
+   * @param string $str The string to extract from.
+   * @param int $start The starting position of the substring.
+   * @param int $end The ending position of the substring.
+   * @param bool $inc_end Whether to include the character at the ending position.
+   * @param bool $count_space Whether to count whitespace characters.
+   * @return string The extracted substring.
+   */
+  function SubString($str, $start, $end, $inc_end = true, $count_space = true) : string {
+    $result = '';
+
+    if ($start > $end) {
+      return 'Range Mistaic!';
+    }
+
+    if ($start >= strlen($str) || $end >= strlen($str)) {
+      return 'Out Of Range!';
+    }
+
+    for ($i = $start; (($inc_end == true) ? $i <= $end : $i < $end) ; $i++) {
+
+      if (!$count_space && $str[$i] == ' ') {
+        $end++;
+      }
+
+      $result .= $str[$i];
+      
+    }
+
+    return $result;
+  }

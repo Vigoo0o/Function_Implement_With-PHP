@@ -6,8 +6,5 @@ error_reporting(E_ALL);
   include './array.php';
 
 
-  if (IsNaN('123456')) {
-    echo 'Is Not A Number!';
-  } else {
-    echo 'Is A Number!';
-  }
+  echo SubString('Vigo Web School', 5, 9, true, true);
+  
