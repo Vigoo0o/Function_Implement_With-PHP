@@ -290,4 +290,22 @@
 
       return $result;
     }
+
+    /**
+   * Parses a string into an array of key-value pairs.
+   *
+   * @return array The parsed array.
+   */
+    function ParseString() : array {
+      $arr = explode('&', $this->value);
+
+      $finResult = [];
+
+      foreach ($arr as $item) {
+        $ex = explode('=', $item);
+        $finResult+=[$ex[0] => $ex[1]];
+      }
+
+      return $finResult;
+    }
   }

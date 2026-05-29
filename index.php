@@ -7,7 +7,8 @@ error_reporting(E_ALL);
   include './clsString.php';
 
 
-  $str = new clsString('!@#$%Vig#$%^^^><123o&*');
+  $str = new clsString('name=vigo&age=40&country=Egypt');
 
-  echo $str->CleanString(false);
-  
+  echo '<pre>';
+    print_r($str->ParseString());
+  echo '</pre>';
