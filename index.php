@@ -7,8 +7,6 @@ error_reporting(E_ALL);
   include './clsString.php';
 
 
-  $str = new clsString('name=vigo&age=40&country=Egypt');
+  $str = new clsString('Vigo#Web#School');
 
-  echo '<pre>';
-    print_r($str->ParseString());
-  echo '</pre>';
+  echo $str->CountWords();

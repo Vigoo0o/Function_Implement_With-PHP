@@ -308,4 +308,16 @@
 
       return $finResult;
     }
+
+    /**
+   * Counts the number of words in a string.
+   *
+   * @param string $seperator The separator used to split the string.
+   * @return int The number of words in the string.
+   */
+    function CountWords($seperator = ' ') : int {
+      $arr = explode($seperator, $this->value);
+
+      return count($arr);
+    }
   }
