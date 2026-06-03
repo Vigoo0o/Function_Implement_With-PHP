@@ -320,4 +320,16 @@
 
       return count($arr);
     }
+
+    function IsFirstLetterCapital() : bool {
+      $words = explode(' ', $this->value);
+
+      foreach ($words as $word) {
+        if (!(ord($word[0]) >= 65 && ord($word[0])  <= 90)) {
+          return false;
+        }
+      }
+
+      return true;
+    }
   }

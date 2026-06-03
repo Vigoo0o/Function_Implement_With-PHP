@@ -7,6 +7,10 @@ error_reporting(E_ALL);
   include './clsString.php';
 
 
-  $str = new clsString('Vigo#Web#School');
+  $str = new clsString('Vigo web School');
 
-  echo $str->CountWords();
+  if ($str->IsFirstLetterCapital()) {
+    echo 'True';
+  } else {
+    echo 'False';
+  }
