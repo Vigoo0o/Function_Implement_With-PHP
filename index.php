@@ -6,19 +6,11 @@ error_reporting(E_ALL);
   // include './array.php';
   // include './clsString.php';
   include './classes/clsArray.php';
+  include './classes/clsNumber.php';
 
 
-  $arr = new clsArray([1,2,3,4,-5]);
+  $num = new clsNumber(10.5);
 
-
-  $arr->DisplayItems();
-  echo $arr->MinimumNumber() . '<br>';
-  echo $arr->MaximumNumber() . '<br>';
-  echo $arr->GetSumOfNumbers() . '<br>';
-
-  if ($arr->IsInArray(7)) {
-    echo 'True';
-  } else {
-    echo 'False';
-  }
+  echo $num->Get() . '<br>';
+  echo $num->Round();
 
