@@ -1,5 +1,7 @@
 <?php
 
+use Dom\CharacterData;
+
 class clsArray {
   private array $container = [];
 
@@ -88,6 +90,26 @@ class clsArray {
     $result = false;
     foreach ($this->container as $itme) {
       if ($itme == $target) return true;
+    }
+
+    return $result;
+  }
+
+  /**
+   * Joins the elements of an array into a string
+   * @param array $arr The array to join
+   * @param string $seperator The separator to use between elements
+   * @return string The joined string
+   */
+  static function Join(array $arr, $seperator = ',') : string  {
+    $result = '';
+
+    for ($i = 0; $i < count($arr); $i++) {
+      $result .= $arr[$i];
+
+      if ($i + 1 != count($arr)) {
+        $result .= ' ' . $seperator . ' ';
+      }
     }
 
     return $result;

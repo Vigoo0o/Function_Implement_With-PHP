@@ -9,8 +9,8 @@ error_reporting(E_ALL);
   include './classes/clsNumber.php';
 
 
-  $num = new clsNumber(10.5);
+  $cars = ['BMW', 'FIAT', 'MIRCEDES', 'KIA'];
 
-  echo $num->Get() . '<br>';
-  echo $num->Round();
+  echo clsArray::Join($cars, '|');
+
 
