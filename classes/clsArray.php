@@ -114,4 +114,14 @@ class clsArray {
 
     return $result;
   }
+
+  static function Fill(int $count,string $value) : array {
+    $result = [];
+
+    for ($i = 0; $i < $count; $i++) {
+      $result[$i] = $value;
+    }
+
+    return $result;
+  }
 }

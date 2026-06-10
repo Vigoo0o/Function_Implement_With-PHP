@@ -11,6 +11,10 @@ error_reporting(E_ALL);
 
   $cars = ['BMW', 'FIAT', 'MIRCEDES', 'KIA'];
 
-  echo clsArray::Join($cars, '|');
+  $arr = clsArray::Fill(5, 'Vigo');
+
+  echo '<pre>';
+  print_r($arr);
+  echo '</pre>';
 
 
