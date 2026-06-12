@@ -332,4 +332,14 @@
 
       return true;
     }
+
+    function Slice(int $start, $end) : string {
+      $result = '';
+
+      for ($i = $start; $i <= $end; $i++) {
+        $result .= $this->value[$i];
+      }
+
+      return $result;
+    }
   }

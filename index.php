@@ -4,17 +4,13 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
   // include './string.php';
   // include './array.php';
-  // include './clsString.php';
+  include './classes/clsString.php';
   include './classes/clsArray.php';
   include './classes/clsNumber.php';
 
 
-  $cars = ['BMW', 'FIAT', 'MIRCEDES', 'KIA'];
+  $str = new clsString("Vigo Web School");
 
-  $arr = clsArray::Range(5, 10);
-
-  echo '<pre>';
-  print_r($arr);
-  echo '</pre>';
+  echo $str->Slice(0, 3);
 
 
