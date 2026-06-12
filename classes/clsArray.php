@@ -124,4 +124,14 @@ class clsArray {
 
     return $result;
   }
+
+  static function Range(int $start, int $end) : array {
+    $result = [];
+
+    for($i = $start; $i <= $end; $i++) {
+      $result[] = $i;
+    }
+
+    return $result;
+  }
 }

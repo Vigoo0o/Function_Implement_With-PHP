@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
   $cars = ['BMW', 'FIAT', 'MIRCEDES', 'KIA'];
 
-  $arr = clsArray::Fill(5, 'Vigo');
+  $arr = clsArray::Range(5, 10);
 
   echo '<pre>';
   print_r($arr);
