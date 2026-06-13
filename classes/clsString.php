@@ -342,4 +342,10 @@
 
       return $result;
     }
+
+    function StrStartsWith($target) : bool {
+      $arr = explode(' ', $this->value);
+
+      return $arr[0] == $target ? true : false;
+    }
   }

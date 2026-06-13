@@ -8,9 +8,12 @@ error_reporting(E_ALL);
   include './classes/clsArray.php';
   include './classes/clsNumber.php';
 
+  $str = new clsString('Vigo Web School');
 
-  $str = new clsString("Vigo Web School");
-
-  echo $str->Slice(0, 3);
+  if ($str->StrStartsWith('Vfigo')) {
+    echo 'yes';
+  } else {
+    echo 'no!';
+  }
 
 
