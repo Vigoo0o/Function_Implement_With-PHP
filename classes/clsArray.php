@@ -134,4 +134,8 @@ class clsArray {
 
     return $result;
   }
+
+  function PushBack($value) : void {
+    $this->container[] = $value;
+  }
 }
