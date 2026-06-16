@@ -348,4 +348,53 @@
 
       return $arr[0] == $target ? true : false;
     }
+
+    function MoneyFormat() : string {
+      $result = '';
+
+      if ($this->value <= '999') return $this->value;
+
+      if ($this->value > '999' && $this->value <= '9999') {
+        $count = 0;
+        for ($i = 0; $i < strlen($this->value); $i++) {
+          $result .= $this->value[$i];
+          
+          if ($count == $i) {
+            $result .= ',';
+          }
+        }
+      } elseif ($this->value > '9999' && $this->value <= '99999') {
+        $count = 1;
+        for ($i = 0; $i < strlen($this->value); $i++) {
+          $result .= $this->value[$i];
+          
+          if ($count == $i) {
+            $result .= ',';
+          }
+        }
+      } elseif ($this->value > '99999' && $this->value <= '999999') {
+        $count = 2;
+        for ($i = 0; $i < strlen($this->value); $i++) {
+          $result .= $this->value[$i];
+          
+          if ($count == $i) {
+            $result .= ',';
+          }
+        }
+      } else {
+        $count = 0;
+        for ($i = 0; $i < strlen($this->value); $i++) {
+          $result .= $this->value[$i];
+          
+          if ($count == $i) {
+            $result .= ',';
+            $count += 3;
+          }
+
+          }
+          $result = substr($result, 0, strlen($result) - 1);
+      }
+      
+      return $result;
+    }
   }

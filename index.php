@@ -8,12 +8,8 @@ error_reporting(E_ALL);
   include './classes/clsArray.php';
   include './classes/clsNumber.php';
 
-  $arr = new clsArray([1,2,3,4]);
+  $str = new clsString("9000");
 
-  $arr->DisplayItems();
-
-  $arr->PushBack(5);
-
-  $arr->DisplayItems();
+  echo $str->MoneyFormat();
 
 
