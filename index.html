@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHP Functions From Scratch</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d0f14;
+      --surface: #13161e;
+      --surface2: #1a1e2a;
+      --border: #252a38;
+      --accent: #7c6af7;
+      --accent2: #4fc3f7;
+      --accent3: #69f0ae;
+      --warn: #ffb74d;
+      --text: #e8eaf0;
+      --text-dim: #7b8299;
+      --text-muted: #4a5068;
+      --tag-str: #c792ea;
+      --tag-arr: #4fc3f7;
+      --tag-num: #69f0ae;
+      --red: #f07178;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      padding: 80px 40px 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 30% 50%, rgba(124,106,247,.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 70% 40%, rgba(79,195,247,.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero h1 .accent { color: var(--accent); }
+    .hero h1 .accent2 { color: var(--accent2); }
+    .hero-sub {
+      color: var(--text-dim);
+      font-size: 15px;
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <p class="hero-eyebrow">PHP Project · From Scratch</p>
+  <h1><span class="accent">Built-in Functions</span><br><span class="accent2">Re-implemented</span></h1>
+  <p class="hero-sub">String, array, and number functions rebuilt using only loops and ASCII logic — no native PHP shortcuts allowed.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">17</div><div class="stat-label">String Methods</div></div>
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">Array Methods</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Number Methods</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Classes</div></div>
+  </div>
+</section>
+
+
+</div>
+
+<footer>
+  PHP Built-in Functions · Implemented From Scratch · by Vigo
+</footer>
+
+</body>
+</html>
