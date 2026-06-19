@@ -8,8 +8,12 @@ error_reporting(E_ALL);
   include './classes/clsArray.php';
   include './classes/clsNumber.php';
 
-  $str = new clsString("9000");
+  $arr = new clsArray(['Tarek', 'Ahmed']);
 
-  echo $str->MoneyFormat();
+  $arr->DisplayItems();
+
+  $arr->StrReplace('Tarek', 'Vigo');
+
+  $arr->DisplayItems();
 
 

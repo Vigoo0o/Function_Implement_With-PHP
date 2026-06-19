@@ -138,4 +138,13 @@ class clsArray {
   function PushBack($value) : void {
     $this->container[] = $value;
   }
+
+  function StrReplace($target, $replaceTo) : void {
+    for ($i = 0; $i < count($this->container); $i++) {
+      if ($this->container[$i] == $target) {
+        $this->container[$i] = $replaceTo;
+        return;
+      }
+    }
+  }
 }
